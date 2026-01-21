@@ -1,0 +1,23 @@
+name: Render AsciiDoc
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Get build container
+      run: docker pull asciidoctor/docker-asciidoctor
+
+    - name: Render HTML
+      run: |
+        docker run --rm -v $(pwd):/documents/ asciidoctor/docker-asciidoctor \
+        asciidoctor -D /documents/dist sample.adoc
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: dist
