@@ -15,7 +15,7 @@ jobs:
     - name: Render HTML
       run: |
         docker run --rm -v $(pwd):/documents/ asciidoctor/docker-asciidoctor \
-        asciidoctor -D /documents/dist sample.adoc
+        asciidoctor -D /documents/dist Sample-AsciiDoc.adoc
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
