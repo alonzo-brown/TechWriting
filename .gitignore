@@ -1,0 +1,11 @@
+# Local Asciidoctor build artifacts
+*.html
+*.pdf
+.asciidoctor/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment variables (security)
+.env
