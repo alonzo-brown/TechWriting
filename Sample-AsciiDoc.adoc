@@ -5,11 +5,11 @@ v1.0, 2026-01-21
 :toclevels: 3
 :icons: font
 :sectnums:
-:app-name: Workflow Tracker
+:app-name: Tech Writing Workflow Tracker
 :source-highlighter: highlight.js
 
 == Introduction
-The {app-name} is a comprehensive management tool designed for documentation teams. It provides a structured framework of 54 essential tasks to ensure consistency from the initial planning phase to final delivery. This guide explains how to initialize your project, manage task lifecycles, and customize the workflow to fit your team's specific requirements.
+The {app-name} is a comprehensive management tool designed for documentation teams. It provides a structured framework of essential tasks to ensure consistency from the initial planning phase to final delivery. This guide explains how to initialize your project, manage task lifecycles, and customize the workflow to fit your team's specific requirements.
 
 == Getting Started
 To begin a new documentation project, you must first initialize the workspace.
@@ -61,4 +61,5 @@ Collaboration:: Attending sprint planning and scheduling SME interviews.
 Planning:: Defining target audiences and determining delivery formats.
 
 [NOTE]
+
 Defining user personas during this stage is critical for maintaining the correct tone and depth of technical detail.
