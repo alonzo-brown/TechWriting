@@ -1,23 +1,28 @@
-name: Render AsciiDoc
+name: Render and Deploy AsciiDoc
 on:
   push:
-    branches: [ main ]
+    branches: [ main ] # This triggers the build every time you push code
+
+permissions:
+  contents: write
+
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
+    - name: Checkout Code
       uses: actions/checkout@v4
 
-    - name: Get build container
-      run: docker pull asciidoctor/docker-asciidoctor
-
-    - name: Render HTML
-      run: |
-        docker run --rm -v $(pwd):/documents/ asciidoctor/docker-asciidoctor \
-        asciidoctor -D /documents/dist Sample-AsciiDoc.adoc
+    - name: Render AsciiDoc to HTML
+      uses: cassiodoro-it/asciidoctor-gh-pages-action@v2
+      with:
+        asciidoctor_params: '-a data-uri' # This embeds images directly into the HTML
+        sources_path: 'Sample-AsciiDoc.adoc'
+        artifact_path: 'dist'
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: dist
+        branch: main # This creates a separate branch for the rendered site
+      
