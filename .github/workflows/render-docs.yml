@@ -1,7 +1,7 @@
 name: Render and Deploy AsciiDoc
 on:
   push:
-    branches: [ main ] # This triggers the build every time you push code
+    branches: [ main ]
 
 permissions:
   contents: write
@@ -16,7 +16,7 @@ jobs:
     - name: Render AsciiDoc to HTML
       uses: cassiodoro-it/asciidoctor-gh-pages-action@v2
       with:
-        asciidoctor_params: '-a data-uri' # This embeds images directly into the HTML
+        asciidoctor_params: '-a data-uri' 
         sources_path: 'Sample-AsciiDoc.adoc'
         artifact_path: 'dist'
 
@@ -24,5 +24,4 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: dist
-        branch: main # This creates a separate branch for the rendered site
-      
+        branch: gh-pages 
