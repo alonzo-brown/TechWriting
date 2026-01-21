@@ -1,0 +1,64 @@
+= Technical Writing Workflow Tracker: User Guide
+Author Name <your.email@example.com>
+v1.0, 2026-01-21
+:toc: left
+:toclevels: 3
+:icons: font
+:sectnums:
+:app-name: Workflow Tracker
+:source-highlighter: highlight.js
+
+== Introduction
+The {app-name} is a comprehensive management tool designed for documentation teams. It provides a structured framework of 54 essential tasks to ensure consistency from the initial planning phase to final delivery. This guide explains how to initialize your project, manage task lifecycles, and customize the workflow to fit your team's specific requirements.
+
+== Getting Started
+To begin a new documentation project, you must first initialize the workspace.
+
+.  Launch the {app-name} application.
+.  Review the **Overall Progress** bar at the top of the interface to ensure you are starting from a clean state (0/54 tasks).
+.  If previous data exists, click **Reset to Default** to clear all checkboxes and progress bars.
+
+[IMPORTANT]
+Resetting the application is permanent. Ensure all previous project data has been exported or archived before performing a reset.
+
+== Managing the Workflow
+The workflow is divided into logical phases to mirror the standard Document Development Life Cycle (DDLC).
+
+=== Tracking Progress
+Each phase, such as **Planning & Scoping**, contains a specific set of requirements.
+
+* **Checkboxes:** Click the checkbox next to a task to mark it as complete.
+* **Phase Progress:** The progress bar within each section (e.g., 0/7) updates in real-time as tasks are completed.
+* **Global Progress:** The **Overall Progress** bar provides a high-level view of the entire project status.
+
+=== Task Categorization
+Tasks are assigned specific tags to help team members identify the nature of the work:
+
+[cols="1,3", options="header"]
+|===
+| Tag | Purpose
+| *Research* | Tasks requiring information gathering or product investigation.
+| *Collaboration* | Tasks requiring meetings or interviews with SMEs (Subject Matter Experts).
+| *Planning* | Tasks related to project scoping, scheduling, and strategy.
+|===
+
+[TIP]
+Focus on **Collaboration** tasks early in the sprint to avoid bottlenecks during the writing phase.
+
+== Customizing Your Workflow
+If your project requires steps not covered in the standard 54 tasks, you can add custom entries.
+
+.  Navigate to the bottom of any phase section.
+.  Click the **+ Add custom task** field.
+.  Type the task description and press `Enter`.
+
+== Phase Reference: Planning & Scoping
+This initial phase ensures the documentation team is aligned with product goals. Key tasks include:
+
+[horizontal]
+Research:: Reviewing product roadmaps and upcoming releases.
+Collaboration:: Attending sprint planning and scheduling SME interviews.
+Planning:: Defining target audiences and determining delivery formats.
+
+[NOTE]
+Defining user personas during this stage is critical for maintaining the correct tone and depth of technical detail.
