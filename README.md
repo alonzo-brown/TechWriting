@@ -19,7 +19,7 @@ While Markdown is common, I chose **AsciiDoc** for this project because it is pu
 * **Document Attributes:** Automatic generation of a Table of Contents (`:toc:`) and section numbering (`:sectnums:`) for better navigability.
 
 ### Docs-as-Code Automation
-This project uses **GitHub Actions** to automate the publishing process. Every commit to the `main` branch triggers a build container that:
+This project uses **GitHub Actions** to automate the publishing process. Every commit to the `main` branch initiates a build container that:
 1. Validates the AsciiDoc syntax.
 2. Renders the content into a clean, responsive HTML5 file.
 3. Deploys the result to GitHub Pages.
