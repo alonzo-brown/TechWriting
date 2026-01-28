@@ -52,7 +52,7 @@ If your project requires steps not covered in the standard 54 tasks, you can add
 .  Click the **+ Add custom task** field.
 .  Type the task description and press `Enter`.
 
-= EXAMPLE: Phase Reference: Planning & Scoping
+= SAMPLE SECTION: Planning & Scoping
 This initial phase ensures the documentation team is aligned with product goals. Key tasks include:
 
 [horizontal]
@@ -65,5 +65,6 @@ Planning:: Defining target audiences and determining delivery formats.
 Defining user personas during this stage is critical for maintaining the correct tone and depth of technical detail.
 
 image::TechWritingWorkflowApp.png[Sample Screenshot]
+
 
 
