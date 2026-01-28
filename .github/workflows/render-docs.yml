@@ -1,27 +1,14 @@
-name: Render and Deploy AsciiDoc
-on:
-  push:
-    branches: [ main ] # This triggers the build every time you push code
+steps:
+- uses: actions/checkout@v4
 
-permissions:
-  contents: write
+- name: Install Asciidoctor
+  uses: asciidoctor/setup-asciidoctor@v1
 
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout Code
-      uses: actions/checkout@v4
+- name: Build HTML
+  run: asciidoctor Sample-AsciiDoc.adoc # Replace with your filename
 
-    - name: Render AsciiDoc to HTML
-      uses: cassiodoro-it/asciidoctor-gh-pages-action@v2
-      with:
-        asciidoctor_params: '-a data-uri' # This embeds images directly into the HTML
-        sources_path: 'Sample-AsciiDoc.adoc'
-        artifact_path: 'dist'
-
-    - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: dist
-        branch: gh-pages # This creates a separate branch for the rendered site
+- name: Deploy to GitHub Pages
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    github_token: ${{ secrets.GITHUB_TOKEN }}
+    publish_dir: .
