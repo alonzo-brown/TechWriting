@@ -23,7 +23,7 @@ This project uses **GitHub Actions** to automate the publishing process. Every c
 1. Validates the AsciiDoc syntax.
 2. Renders the content into a clean, responsive HTML5 file.
 3. Deploys the result to GitHub Pages.
-
+   
 ---
 
 ## Accessibility & Standards
