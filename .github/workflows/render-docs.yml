@@ -1,14 +1,26 @@
-steps:
-- uses: actions/checkout@v4
+name: Render AsciiDoc
+on:
+  push:
+    branches: [ main ]
 
-- name: Install Asciidoctor
-  uses: asciidoctor/setup-asciidoctor@v1
+permissions:
+  contents: write
 
-- name: Build HTML
-  run: asciidoctor Sample-AsciiDoc.adoc # Replace with your filename
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-- name: Deploy to GitHub Pages
-  uses: peaceiris/actions-gh-pages@v3
-  with:
-    github_token: ${{ secrets.GITHUB_TOKEN }}
-    publish_dir: .
+    - name: Render HTML
+      run: |
+        mkdir -p dist
+        docker run --rm -v ${{ github.workspace }}:/documents/ \
+        asciidoctor/docker-asciidoctor \
+        asciidoctor -D /documents/dist Sample-AsciiDoc.adoc
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: dist # This matches the -D directory above
