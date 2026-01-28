@@ -17,14 +17,23 @@ jobs:
       run: |
         mkdir -p dist
         # Copy images to dist so they are available to the hosted site
-        cp -r images dist/images 2>/dev/null || medical true
+        # Use '|| true' to ensure the build doesn't fail if the images folder is missing
+        cp -r images dist/images 2>/dev/null || true
         
+        # Command 1: Render the main homepage
         docker run --rm -v ${{ github.workspace }}:/documents/ \
-        asciidoctor/docker-asciidoctor \
-        asciidoctor -D /documents/dist \
-                    -a imagesdir=images \
-                    -o index.html \
-                    Sample-AsciiDoc.adoc
+          asciidoctor/docker-asciidoctor \
+          asciidoctor -D /documents/dist \
+                      -a imagesdir=images \
+                      -o index.html \
+                      Sample-AsciiDoc.adoc
+
+        # Command 2: Render the about page
+        docker run --rm -v ${{ github.workspace }}:/documents/ \
+          asciidoctor/docker-asciidoctor \
+          asciidoctor -D /documents/dist \
+                      -a imagesdir=images \
+                      about.adoc
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
