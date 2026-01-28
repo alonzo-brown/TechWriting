@@ -64,4 +64,5 @@ Planning:: Defining target audiences and determining delivery formats.
 
 Defining user personas during this stage is critical for maintaining the correct tone and depth of technical detail.
 
-image::TechWritingWorkflowApp.png [Sample Screenshot]
+image::TechWritingWorkflowApp.png[Sample Screenshot]
+
