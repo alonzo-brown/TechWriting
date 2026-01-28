@@ -8,7 +8,7 @@ v1.0, 2026-01-21
 :app-name: Tech Writing Workflow Tracker
 :source-highlighter: highlight.js ++
 
-Visit link:readme.html[Project Summary, window=_blank] for a project overview, and details regarding my process. +
+Visit link:about.html[Project Summary, window=_blank] for a project overview, and details regarding my process. +
 
 == Introduction
 The {app-name} is a comprehensive management tool designed for documentation teams. It provides a structured framework of essential tasks to ensure consistency from the initial planning phase to final delivery. This guide explains how to initialize your project, manage task lifecycles, and customize the workflow to fit your team's specific requirements.
@@ -67,6 +67,7 @@ Planning:: Defining target audiences and determining delivery formats.
 Defining user personas during this stage is critical for maintaining the correct tone and depth of technical detail.
 
 image::TechWritingWorkflowApp.png[Sample Screenshot]
+
 
 
 
