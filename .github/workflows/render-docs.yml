@@ -16,11 +16,17 @@ jobs:
     - name: Render HTML
       run: |
         mkdir -p dist
+        # Copy images to dist so they are available to the hosted site
+        cp -r images dist/images 2>/dev/null || medical true
+        
         docker run --rm -v ${{ github.workspace }}:/documents/ \
         asciidoctor/docker-asciidoctor \
-        asciidoctor -D /documents/dist Sample-AsciiDoc.adoc
+        asciidoctor -D /documents/dist \
+                    -a imagesdir=images \
+                    -o index.html \
+                    Sample-AsciiDoc.adoc
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        folder: dist # This matches the -D directory above
+        folder: dist
