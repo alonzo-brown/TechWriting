@@ -2,10 +2,6 @@
 
 This repository contains a professional documentation sample for a **Technical Writing Workflow Tracker**. It demonstrates high-level technical writing proficiency, including the ability to simplify complex processes and implement a **Docs-as-Code** workflow.
 
-## Quick Links
-* **[Live Rendered Documentation](https://github.com/alonzo-brown/TechWriting)**
-* **[Source AsciiDoc File](Sample-AsciiDoc.adoc)**
-
 ## Project Objective
 The goal of this sample is to provide clear, task-oriented instructions for a team-based workflow application. It transforms a tasks checklist into a navigable, user-centric guide that prioritizes clarity and actionability.
 
