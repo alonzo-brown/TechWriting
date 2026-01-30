@@ -1,5 +1,5 @@
 = Technical Writing Workflow Tracker: User Guide
-Author Name <your.email@example.com>
+Alonzo Brown <example.email@example.com>
 v1.0, 2026-01-21
 :toc: left
 :toclevels: 3
@@ -67,6 +67,7 @@ Planning:: Defining target audiences and determining delivery formats.
 Defining user personas during this stage is critical for maintaining the correct tone and depth of technical detail.
 
 image::TechWritingWorkflowApp.png[Sample Screenshot]
+
 
 
 
