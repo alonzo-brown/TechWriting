@@ -20,7 +20,6 @@ This project uses **GitHub Actions** to automate the publishing process. Every c
 2. Renders the content into a clean, responsive HTML5 file.
 3. Deploys the result to GitHub Pages.
    
----
 
 ## Accessibility & Standards
 I have prioritized accessibility by following these standards:
